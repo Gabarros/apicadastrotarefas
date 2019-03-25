@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ToastController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-contact',
@@ -7,8 +7,16 @@ import { NavController } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController) {
+  contact: any;
 
+  constructor(public navCtrl: NavController,  public navParams: NavParams
+    , private toast: ToastController) {
+   
+  }
+
+  
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ContactPage');
   }
 
 }
