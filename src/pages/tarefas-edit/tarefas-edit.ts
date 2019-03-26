@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Tarefa, TarefasProvider } from '../../providers/tarefas/tarefas';
+import { Usuario, UsuariosProvider } from '../../providers/usuarios/usuarios';
 
 /**
  * Generated class for the TarefasEditPage page.
@@ -17,17 +18,27 @@ import { Tarefa, TarefasProvider } from '../../providers/tarefas/tarefas';
 export class TarefasEditPage {
 
   tarefa: Tarefa;
+  usuarios: Array<Usuario>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toast: ToastController, 
-    private tarefasProvider: TarefasProvider) {
+    private tarefasProvider: TarefasProvider, public usuariosProvider: UsuariosProvider) {
       this.tarefa = new Tarefa();
 
       if (this.navParams.data.id) {
         this.tarefasProvider.findById(this.navParams.data.id)
           .then((result: any) => {
             this.tarefa = result;
-          })
+          }
+          );
       }
+
+      this.usuarios = new Array<Usuario>();
+
+      this.usuariosProvider.findAll().then(
+        (result: any) => {
+          this.usuarios = result;
+        }
+      );
   }
 
   ionViewDidLoad() {

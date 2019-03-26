@@ -32,7 +32,7 @@ export class TarefasProvider {
     });
   }
 
-  findById(id) {
+  findById(id: number) {
     return new Promise(resolve => {
       this.http.get(this.apiUrl+id)
       .subscribe(data => {
@@ -45,7 +45,7 @@ export class TarefasProvider {
     });
   }
 
-  deleteById(id) {
+  deleteById(id: number) {
     return new Promise(resolve => {
       this.http.delete(this.apiUrl+id)
       .subscribe(data => {
@@ -60,11 +60,14 @@ export class TarefasProvider {
   }
 
 
-  save(tarefa) {
+  save(tarefa: any) {
     let data = JSON.stringify(tarefa);
     return new Promise((resolve, reject) => {
-      this.http.post(this.apiUrl, data, { headers: { 'Content-Type': 'application/json' }})
-      .subscribe(res => {
+      this.http.post(this.apiUrl,
+         data,
+          { headers: { 'Content-Type': 'application/json' }})
+      .subscribe(
+        res => {
         resolve(res);
         console.log('The result is:'+res);
         console.log(tarefa);

@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "app_id": "",
+  "app_id": "api",
   "type": "ionic-angular",
   "proxies":[
     {

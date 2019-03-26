@@ -6,9 +6,9 @@ import { TarefasEditPage } from '../tarefas-edit/tarefas-edit';
 @IonicPage()
 @Component({
   selector: 'page-contact',
-  templateUrl: 'contact.html'
+  templateUrl: 'tarefas.html'
 })
-export class ContactPage {
+export class TarefasPage {
 
   tarefas: Array<Tarefa>;
 
@@ -20,7 +20,7 @@ export class ContactPage {
 
   
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ContactPage');
+    console.log('ionViewDidLoad TarefasPage');
   }
 
   ionViewWillEnter() {

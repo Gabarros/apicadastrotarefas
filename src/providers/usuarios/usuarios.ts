@@ -10,7 +10,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class UsuariosProvider {
 
-  apiUrl = 'http://localhost:8080/api/usuarios/';
+  apiUrl = '/api/usuarios/';
   usuarios: any;
 
   constructor(public http: HttpClient) {
@@ -30,7 +30,7 @@ export class UsuariosProvider {
     });
   }
 
-  findById(id) {
+  findById(id: number) {
     return new Promise(resolve => {
       this.http.get(this.apiUrl+id)
       .subscribe(data => {
@@ -43,7 +43,7 @@ export class UsuariosProvider {
     });
   }
 
-  deleteById(id) {
+  deleteById(id: number) {
     return new Promise(resolve => {
       this.http.delete(this.apiUrl+id)
       .subscribe(data => {
@@ -56,7 +56,7 @@ export class UsuariosProvider {
     });
 
 }
-save(usuario) {
+save(usuario: any) {
   let data = JSON.stringify(usuario);
   return new Promise((resolve, reject) => {
     this.http.post(this.apiUrl, data)

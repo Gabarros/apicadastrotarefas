@@ -14,6 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TarefasProvider } from '../providers/tarefas/tarefas';
 import { UsuariosProvider } from '../providers/usuarios/usuarios';
 import { TarefasEditPage } from '../pages/tarefas-edit/tarefas-edit';
+import { TarefasPage } from '../pages/tarefas/tarefas';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TarefasEditPage } from '../pages/tarefas-edit/tarefas-edit';
     ContactPage,
     HomePage,
     TabsPage,
-    TarefasEditPage
+    TarefasEditPage,
+    TarefasPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { TarefasEditPage } from '../pages/tarefas-edit/tarefas-edit';
     ContactPage,
     HomePage,
     TabsPage,
-    TarefasEditPage
+    TarefasEditPage,
+    TarefasPage
   ],
   providers: [
     StatusBar,

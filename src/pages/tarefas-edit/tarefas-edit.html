@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>tarefas-edit</ion-title>
+    <ion-title>Alterar Tarefas</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -28,18 +28,17 @@
 
     <ion-item>
       <ion-label>Status</ion-label>
-      <ion-select placeholder="Select One" >
-        <ion--option *ngFor="let s of tarefas">{{s.status}}</ion-option>
+      <ion-select   [(ngModel)]="tarefa.id" placeholder="Select One" >
+        <ion-option value="{{tarefa.id}}" *ngFor="let s of tarefas">{{s.status}}</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
-        <ion-label>Status</ion-label>
-        <ion-select placeholder="Select One">
-          <ion-option *ngFor="let u of usuarios">{{u.nome}}</ion-option>
-
+        <ion-label>Usuário</ion-label>
+        <ion-select [(ngModel)]="usuario_id" placeholder="Select One">
+          <ion-option value="{{usuario.id}}" *ngFor="let u of usuarios">{{u.nome}}</ion-option>
         </ion-select>
-      </ion-item>
+    </ion-item>
 
   
 
