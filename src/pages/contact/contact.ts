@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, ToastController, NavParams} from 'ionic-angular';
+import { NavController, ToastController, NavParams, IonicPage} from 'ionic-angular';
 import { TarefasProvider } from '../../providers/tarefas/tarefas';
 import { TarefasEditPage } from '../tarefas-edit/tarefas-edit';
 
-
+@IonicPage()
 @Component({
   selector: 'page-contact',
   templateUrl: 'contact.html'
@@ -14,7 +14,7 @@ export class ContactPage {
 
   constructor(public navCtrl: NavController,  public navParams: NavParams
     ,public tarefasProvider: TarefasProvider, private toast: ToastController) {
-   
+      console.log('Carregado');
       this.getTarefas();
   }
 

@@ -14,26 +14,38 @@
 
 
 <ion-content padding>
-    <ion-list>
+  <ion-list>
 
-        <ion-item>
-          <ion-label stacked>Nome</ion-label>
-          <ion-input type="text" name="nome" [(ngModel)]="tarefa.nome"></ion-input>
-        </ion-item>
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="tarefa.nome"></ion-input>
+    </ion-item>
 
-        <ion-item>
-            <ion-label stacked>Data</ion-label>
-            <ion-input type="text" name="data" [(ngModel)]="tarefa.data"></ion-input>
-          </ion-item>
-    
-        <ion-item>
-          <ion-label stacked>Status da Tarefa</ion-label>
-          <ion-input type="text" name="status" [(ngModel)]="tarefa.status"></ion-input>
-        </ion-item>
-    
-      </ion-list>
-    
-      <button ion-button block (click)="save()">Salvar</button>
-      
+    <ion-item>
+      <ion-label stacked>Data</ion-label>
+      <ion-input type="text" name="data" [(ngModel)]="tarefa.data"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Status</ion-label>
+      <ion-select placeholder="Select One" >
+        <ion--option *ngFor="let s of tarefas">{{s.status}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Status</ion-label>
+        <ion-select placeholder="Select One">
+          <ion-option *ngFor="let u of usuarios">{{u.nome}}</ion-option>
+
+        </ion-select>
+      </ion-item>
+
+  
+
+  </ion-list>
+
+  <button ion-button block (click)="save()">Salvar</button>
+
 
 </ion-content>

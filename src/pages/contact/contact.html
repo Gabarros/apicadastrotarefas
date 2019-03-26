@@ -8,8 +8,9 @@
 
 <ion-content>
     <ion-list>
+      <h1>Lista</h1>
         <ion-item-sliding *ngFor="let c of tarefas">
-          <button ion-item (click)="editTarefas(c.id)">
+          <button ion-item (click)="editTarefa(c.id)">
             <h2>{{c.nome}}</h2>
             <h2>{{c.data}}</h2>
             <h2>{{c.status}}</h2>
