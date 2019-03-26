@@ -2,7 +2,19 @@
   "name": "api",
   "app_id": "",
   "type": "ionic-angular",
+  "proxies":[
+    {
+      "path": "/api/tarefas/",
+      "proxyUrl": "http://localhost:8080/api/tarefas/"
+    },
+    {
+      "path": "/api/usuarios/",
+      "proxyUrl": "http://localhost:8080/api/usuarios/"
+    }
+  ],
   "integrations": {
     "cordova": {}
   }
+
+  
 }

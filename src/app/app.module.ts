@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -12,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TarefasProvider } from '../providers/tarefas/tarefas';
 import { UsuariosProvider } from '../providers/usuarios/usuarios';
+import { TarefasEditPage } from '../pages/tarefas-edit/tarefas-edit';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import { UsuariosProvider } from '../providers/usuarios/usuarios';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    TarefasEditPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,7 +35,8 @@ import { UsuariosProvider } from '../providers/usuarios/usuarios';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    TarefasEditPage
   ],
   providers: [
     StatusBar,
