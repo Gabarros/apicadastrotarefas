@@ -19,7 +19,7 @@ export class UsuariosProvider {
 
   findAll() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl)
+      this.http.get(this.apiUrl+"")
       .subscribe(data => {
         resolve(data);
         console.log('The result is:');
