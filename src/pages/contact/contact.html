@@ -6,29 +6,29 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-    <ion-list>
-      <h1>Lista</h1>
-        <ion-item-sliding *ngFor="let c of tarefas">
-          <button ion-item (click)="editTarefa(c.id)">
-            <h2>{{c.nome}}</h2>
-            <h2>{{c.data}}</h2>
-            <h2>{{c.status}}</h2>
-            <!-- <h2>{{c.usuario.nome}}</h2> -->
-          </button>
-    
-          <ion-item-options side="left">
-              <button ion-button color="danger" (click)="removeTarefa(c.id)">
-                <ion-icon name="trash"></ion-icon>
-                Excluir
-              </button>
-          </ion-item-options>
-        </ion-item-sliding>
-      </ion-list>
-      <ion-fab right bottom>
-          <button ion-fab color="light" (click)="addTarefa()">
-            <ion-icon name="add"></ion-icon>
-          </button>
-      </ion-fab>
-  
+<ion-content color="dark">
+  <ion-list>
+    <h1>Lista de tarefas</h1>
+    <ion-item-sliding *ngFor="let c of tarefas">
+      <button ion-item (click)="editTarefa(c.id)">
+        <h2>{{c.nome}}</h2>
+        <h2>{{c.data}}</h2>
+        <h2>{{c.status}}</h2>
+        <h2>{{c.usuario.nome}}</h2>
+      </button>
+
+      <ion-item-options side="left">
+        <button ion-button color="danger" (click)="removeTarefa(c.id)">
+          <ion-icon name="trash"></ion-icon>
+          Excluir
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="light" (click)="addTarefa()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
 </ion-content>
