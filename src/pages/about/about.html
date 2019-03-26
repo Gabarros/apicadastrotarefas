@@ -1,11 +1,33 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Tarefas
+      Usuários
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+
+<ion-content color="dark">
+  <ion-list>
+    <h1>Lista de Usuários</h1>
+    <ion-item-sliding *ngFor="let c of usuarios">
+      <button ion-item (click)="editUsuario(c.id)">
+        <h2>{{c.nome}}</h2>
+        <h2>{{c.email}}</h2>
+      </button>
+
+      <ion-item-options side="left">
+        <button ion-button color="danger" (click)="removeUsuario(c.id)">
+          <ion-icon name="trash"></ion-icon>
+          Excluir
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="light" (click)="addUsuario()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 
 </ion-content>

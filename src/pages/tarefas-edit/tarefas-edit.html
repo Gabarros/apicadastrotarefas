@@ -28,8 +28,8 @@
 
     <ion-item>
       <ion-label>Status</ion-label>
-      <ion-select   [(ngModel)]="tarefa.id" placeholder="Select One" >
-        <ion-option value="{{tarefa.id}}" *ngFor="let s of tarefas">{{s.status}}</ion-option>
+      <ion-select   [(ngModel)]="tarefa.status" placeholder="Select One" >
+        <ion-option value="{{tarefa.status}}" *ngFor="let s of tarefas">{{s.status}}</ion-option>
       </ion-select>
     </ion-item>
 

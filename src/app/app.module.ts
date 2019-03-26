@@ -15,6 +15,7 @@ import { TarefasProvider } from '../providers/tarefas/tarefas';
 import { UsuariosProvider } from '../providers/usuarios/usuarios';
 import { TarefasEditPage } from '../pages/tarefas-edit/tarefas-edit';
 import { TarefasPage } from '../pages/tarefas/tarefas';
+import { UsuariosEditPage } from '../pages/usuarios-edit/usuarios-edit';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { TarefasPage } from '../pages/tarefas/tarefas';
     HomePage,
     TabsPage,
     TarefasEditPage,
+    UsuariosEditPage,
     TarefasPage
   ],
   imports: [
@@ -39,6 +41,7 @@ import { TarefasPage } from '../pages/tarefas/tarefas';
     HomePage,
     TabsPage,
     TarefasEditPage,
+    UsuariosEditPage,
     TarefasPage
   ],
   providers: [

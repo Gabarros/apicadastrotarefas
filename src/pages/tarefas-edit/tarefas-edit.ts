@@ -19,6 +19,7 @@ export class TarefasEditPage {
 
   tarefa: Tarefa;
   usuarios: Array<Usuario>;
+  usuario: Usuario;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toast: ToastController, 
     private tarefasProvider: TarefasProvider, public usuariosProvider: UsuariosProvider) {
@@ -28,8 +29,8 @@ export class TarefasEditPage {
         this.tarefasProvider.findById(this.navParams.data.id)
           .then((result: any) => {
             this.tarefa = result;
-          }
-          );
+            console.log('Editando tarefa');
+          });
       }
 
       this.usuarios = new Array<Usuario>();
